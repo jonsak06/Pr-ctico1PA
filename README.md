@@ -57,3 +57,42 @@ c) ¿Qué modificaciones habría que realizarle a la implementación para que so
     r3 = 3 * r2; 
     if (2 == (2 + r2))
         r3 = 2 + r2;
+
+
+Ejercicio 3 (medio, imprescindible)
+
+a) Implementar en C++ una clase que represente a los conjuntos de enteros, utilizando como estructura de datos arreglos dinámicos. La clase deberá proveer al menos las 
+siguientes operaciones:
+
+    agregar : SetInt x int -> SetInt
+    remover : SetInt x int -> SetInt
+    union : SetInt x SetInt -> SetInt
+    diferencia : SetInt x SetInt -> SetInt
+    interseccion : SetInt x SetInt -> SetInt
+    pretence : SetInt x int -> bool
+    esVacio : SetInt -> bool
+    cantidadElem : SetInt -> int
+    esIgual : SetInt x SetInt -> bool
+
+b) Sobrecargar los operadores +, -, == y != para que realicen la unión, diferencia, igualdad y desigualdad de conjuntos.
+
+c) Ejecutar manualmente y en una computadora el siguiente programa comparando los resultados.
+
+    SetInt a,b,c,d,e;
+    a.agregar(0);
+    a.agregar(1);
+    b.agregar(1);
+    b.agregar(2);
+    c.agregar(0);
+    c.agregar(1);
+    c.agregar(2);
+    d = a + b;
+    e = c - b;
+    if (a == d)
+    cout << "a == d\n";
+    else
+    cout << "a != d\n";
+    if (e == a) 
+    cout << "e == a\n";
+    else
+    cout << "e != a\n";
